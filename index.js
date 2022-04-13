@@ -1,35 +1,27 @@
-const mongoose = require ("mongoose");
+const mongoose = require ("mongoose") ;
+const books = require("./models/books");
+const booksController = require("./controllers/bookcontroller");
+const express = require ("express"),
+app = express();
+app.set("view engine", "ejs");
+app.set("port", process.env.PORT | 3000);
 
+app.use(
+express.urlencoded({
+extended: false,
+})
+);
 
-require("dotenv").config();
+app.use (express.json());
+require ("dotenv").config();
 const uri = process.env.ATLAS_URI;
-
 console.log(uri);
-
-mongoose.connect(uri, { useUnifiedTopology: true });
-
+mongoose.connect (uri, { useUnifiedTopology: true });
 const db = mongoose.connection;
-
 db.once("open", () => {
 console.log ("Successfully connected to MongoDB using Mongoose!");
 });
-const express = require("express"), 
-app=express(),
-homeController= require("./controllers/homeController");
-
-app.set("port", process.env.PORT || 3000);
-app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(
-express.urlencoded({
-    extended: false
-})
-);
-app.get('/home', (req,res)=>{
-    res.render('home')
-});
-app.get("/views/:ejs", homeController.respondwithimage);
-
-app.listen(app.get("port"), ()=>{
-    console.log(`Server running at http://localhost:${app.get("port")}`);
+app.get ("/home", booksController.getAllBooks, (req, res, next) => {
+ console.log(req.data);
+res.render("'home", {books: req.data });
 });
