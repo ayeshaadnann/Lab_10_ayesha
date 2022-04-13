@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/header') %>
     <title>Ayesha's Lab 10</title>
     <style>
         body{
-            
+            background-color: blueviolet;
             border-style: double;
             text-align: center;
             padding: 30px;
         }
     </style>
+    
 </head>
 <body>
 </br>
 <h1>Click on any Book to see the details</h1>
 <body>
-<div id="container">
-<p id="book"><b><a href="http://localhckt: 3000/books/1" targets="_blank"> %-books[0].book %></a></b></p>
-<p id="book"><b><a href="http://localhost:3000/books/2" targets=" _blank"> %-books[1].book %></a></b></p>
-<p id="book"><b><a href="http://localhost:3000/books/3" targets=" _blank"> %=books[2].book %></a></b></p>
-</body>
-</body>
+    <div id="container">
+      <p id="book"><b><a href="http://localhost:3000/books/1" target="_blank"><%=books[0].book %></a></b></p>
+      <p id="book"><b><a href="http://localhost:3000/books/2" target="_blank"><%=books[1].book %></a></b></p>
+      <p id="book"><b><a href="http://localhost:3000/books/3" target="_blank"><%=books[2].book %></a></b></p>
+  </body>
 </html>

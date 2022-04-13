@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Book 3</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 120px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px;
+        padding: 10px;
+        /* margin-left: 5.5in; */
+      }
+      p {
+        font-size: larger;
+        color: black;
+        width: 400px;
+        height: 30px;
+        background-color: white;
+        padding: 10px;
+        margin-top: auto;
+        margin-left: 0.4in;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%=books.book %></h1>
+    <div id="container">
+      <p><b>Author:</b><%=books.author %></p>
+      <p><a href="<%=books.link%>" target="_blank">Link</a></p>
+    </div>
+  </body>
+</html>
