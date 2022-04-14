@@ -28,6 +28,7 @@ app.get("/books/:book", booksController.getBook, (req, res, next) => {
   console.log(req.data);
   res.render(book, { books: req.data });
 });
+app.get("/ayeshalablab10", controller.sendcss)
 app.listen(app.get("port"), () => {
   console.log(`Server Running on http://localhost:${app.get("port")}`);
 });
