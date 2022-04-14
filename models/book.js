@@ -4,6 +4,5 @@ bookSchema = mongoose.Schema({
     author: String,
     Link: String
 });
-module.exports = mongoose.model("books", bookSchema);
-
+module.exports = mongoose.model("bookS", bookSchema);
 
