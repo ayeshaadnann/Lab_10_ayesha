@@ -3,22 +3,31 @@
 <head>
     <title>Ayesha's Lab 10</title>
     <style>
+        #mybooks{
+            background-color: rgb(198, 191, 191);
+        }
         body{
-            background-color: blueviolet;
+            background-color: rgb(210, 181, 236);
             border-style: double;
             text-align: center;
             padding: 30px;
         }
-    </style>
-    
+        p{
+            text-align: center;
+            background-color: rgb(230, 187, 187)
+        }
+        h1{
+            text-align: center;
+            color: rgb(67, 133, 67);
+        }
+    </style>   
 </head>
-<body>
 </br>
 <h1>Click on any Book to see the details</h1>
 <body>
-    <div id="container">
-      <p id="book"><b><a href="http://localhost:3000/books/1" target="_blank"><%=books[0].book %></a></b></p>
-      <p id="book"><b><a href="http://localhost:3000/books/2" target="_blank"><%=books[1].book %></a></b></p>
-      <p id="book"><b><a href="http://localhost:3000/books/3" target="_blank"><%=books[2].book %></a></b></p>
+    <div id="mybooks">
+      <p id="book"><b><a href="http://localhost:3000/books/1" ><%=books[0].name %></a></b></p>
+      <p id="book"><b><a href="http://localhost:3000/books/2" ><%=books[1].name %></a></b></p>
+      <p id="book"><b><a href="http://localhost:3000/books/3" ><%=books[2].name %></a></b></p>
   </body>
 </html>

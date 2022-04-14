@@ -5,31 +5,29 @@
   <head>
     <title>Book 3</title>
     <style>
-      #container {
-        width: 500px;
-        height: 120px;
-        background-color: rgb(165, 165, 165);
-        font-size: 20px;
-        padding: 10px;
-        /* margin-left: 5.5in; */
-      }
-      p {
-        font-size: larger;
-        color: black;
+     #mybooks {
+      width: 500px;
+      height: 120px;
+      background-color: rgb(198, 191, 191);
+      border-spacing: 4px;
+      font-size: 20px;
+      padding: 10px;
+    }
+    body{
+            background-color: rgb(210, 181, 236);
+    }
+    p{
         width: 400px;
-        height: 30px;
-        background-color: white;
-        padding: 10px;
-        margin-top: auto;
-        margin-left: 0.4in;
-      }
+        height: 20px;
+        background-color: rgb(230, 187, 187);
+    }
     </style>
   </head>
   <body>
-    <h1><%=books.book %></h1>
-    <div id="container">
+    <h1><%=books.name %></h1>
+    <div id="mybooks">
       <p><b>Author:</b><%=books.author %></p>
-      <p><a href="<%=books.link%>" target="_blank">Link</a></p>
+      <p><a href="<%=books.Link %>" target="_blank">Purchace  on amazon!</a></p>
     </div>
   </body>
 </html>

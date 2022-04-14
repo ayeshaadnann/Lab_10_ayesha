@@ -8,7 +8,6 @@ exports.getAllBooks = (req, res, next) => {
     next();
   });
 };
-
 exports.getBook = (req, res, next) => {
   let book = req.params.book;
   if (book == "1") {
@@ -28,7 +27,7 @@ exports.getBook = (req, res, next) => {
     );
   } else if (book == "3") {
     books.findOne(
-      { book: "Mockingjay" },
+      { book: "Mocking Jay" },
       (error, books) => {
         if (error) next(error);
         req.data = books;
